@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment Ch 30 - 34
+        </title>
+    </head>
+    <body>
+        <script>
+            var name = prompt("Enter Your Name Here","i.e. Aashir");
+            var date = prompt("Enter Date of Birth", "i.e. 21");
+            var month = prompt("Enter Month of Birth", "i.e 10");
+            var year = prompt("Enter Year of Birth", "i.e. 2001");
+
+            var allmonths = ["January","February","March","April","May","June","July","August","september","October","November","December"];
+            var DOB = new Date(allmonths[month] + date + "," + year);
+            console.log(DOB);
+
+            var currentDate = new Date();
+            var msDiff = currentDate.getTime() - DOB.getTime() ;
+            var second = Math.round(currentDate.getSeconds() - DOB.getSeconds());
+            var minute = Math.round(currentDate.getMinutes()- DOB.getMinutes());
+            var hours = Math.round(currentDate.getHours()-DOB.getHours());
+            var days = Math.round(currentDate.getDay() - DOB.getDay());
+            var year = Math.round(currentDate.getFullYear() - DOB.getFullYear());
+            var months = Math.round(((msDiff / (1000 * 60 * 60 * 24) / 365) * 12) % 12);
+            console.log("Hello! " +name+ ",You are " +year+ " years," +months+ " months," +days+ " days," +hours+ " hours," +minute+ " minutes," +second+ " seconds, Old.");
+            
+            var nextYear = currentDate.getFullYear() + 1;
+            console.log(nextYear)
+            var NextDob = new Date(allmonths[month] + date + ", " + nextYear);
+            console.log(NextDob)
+            var msDiffNext = NextDob.getTime() - currentDate.getTime();
+            var secNext = Math.round(currentDate.getSeconds()- NextDob.getSeconds());
+            var minutesNext = Math.round(currentDate.getMinutes() - NextDob.getMinutes());
+            var hoursNext = Math.round(currentDate.getHours() - NextDob.getHours());
+            var daysNext = Math.round(NextDob.getDay() - currentDate.getDay());
+            var yearsNext = Math.round(NextDob.getFullYear() - currentDate.getFullYear());
+            var monthsNext = Math.round(((msDiffNext / (1000 * 60 * 60 * 24) / 365) * 12) % 12)
+            console.log("Hey! " +name+ ",Now " +yearsNext+ " years," +monthsNext + " month ", daysNext + " days " + hoursNext + " hours " + minutesNext + " minutes " + secNext + " seconds, left in your Birthday. ");
+
+     </script>
+        <h1>Assignment JavaScript Chapter 30 to 34</h1>
+    </body>
+</html>
