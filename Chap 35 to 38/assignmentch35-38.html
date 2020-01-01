@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Factorial By Function Ch 35-38</title>
+</head>
+<body>
+    <script>
+        var inputNum = prompt("Enter a number here for factorial?","4,10,25");
+        var factorialnum = fact(inputNum);
+        console.log(factorialnum);
+        function fact(inputNum){
+            var fact = 1;
+            while(inputNum !== 1) {
+                fact = fact * inputNum--;
+            }
+            return fact;            
+        }
+    </script>
+    <h1>Assignment JavaScript Chapter 35 to 38</h1>
+    <h1>Factorial By using Function </h1>
+</body>
+</html>

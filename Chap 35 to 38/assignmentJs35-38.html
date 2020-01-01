@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Function Chap 35-38
+        </title>
+    </head>
+    <body>
+        <script>
+        var inputValue = prompt("What is your name?", "my name is aashir khan");
+        var capitalizeValue = capitalizeFirstValue(inputValue);
+        console.log(capitalizeValue);
+        function capitalizeFirstValue(inputValue){
+            var stringArray = inputValue.split(" ");
+            var capitalizeValue = " ";
+            var capitalValue, remainingValue, space=" ";
+            for(var i = 0;i < stringArray.length; i++){
+                capitalValue = stringArray[i].charAt(0).toUpperCase();
+                remainingValue = stringArray[i].slice(1);
+                capitalizeValue = capitalizeValue.concat(capitalValue,  remainingValue, space);
+            }
+            return(capitalizeValue);
+        }
+        </script>
+        <h1>Assignment Chapter 35-38 (Function)</h1>
+    </body>
+</html>
